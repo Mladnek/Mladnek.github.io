@@ -27,12 +27,13 @@
 
 <section id="ru" lang="ru">
 <h1>Политика конфиденциальности игры «Пасьянс 3×3»</h1>
-<p class="muted">Действует с 20 октября 2026 года. Разработчик: NEVOT. Связь: <a href="mailto:nekrassovoleg229@gmail.com">nekrassovoleg229@gmail.com</a>.</p>
+<p class="muted">Действует с 15 ноября 2026 года. Разработчик: NEVOT. Связь: <a href="mailto:nekrassovoleg229@gmail.com">nekrassovoleg229@gmail.com</a>.</p>
 
 <h2>Коротко</h2>
 <ul>
   <li>Игра не требует регистрации и не запрашивает разрешений: ни камеры, ни микрофона, ни контактов, ни геолокации, ни файлов.</li>
   <li>Имя, телефон, электронную почту и платёжные данные игра не собирает. Покупок за деньги в игре нет.</li>
+  <li>В таблице рекордов игры видно ваше лучшее время. Рядом показывается ваш ник Google Play Игр, если вы вошли в них; ник можно скрыть, и тогда вы будете «Аноним».</li>
   <li>Партии, статистика, достижения, монеты и открытое оформление хранятся на вашем устройстве. Если вы вошли в Google Play Игры, их копия хранится в вашем аккаунте Google Play Игр, чтобы прогресс не потерялся при переустановке или смене телефона.</li>
   <li>Обезличенная аналитика, отчёты о сбоях и показ рекламы работают через сервисы Google — подробно ниже.</li>
 </ul>
@@ -42,12 +43,16 @@
 <h2>Облачное сохранение в Google Play Играх</h2>
 <p>Если вы вошли в Google Play Игры, игра хранит копию прогресса в «Сохранённых играх» вашего аккаунта Google Play Игр: историю партий и статистику, операции с монетами, открытые и выбранные рубашки, стили карт и фоны стола, прогресс достижений, сыгранные дни «Пасьянса дня». Копия нужна, чтобы прогресс вернулся после переустановки игры или на новом телефоне; с нескольких устройств прогресс объединяется. Копию хранит Google, разработчик к ней доступа не имеет. Без входа в Google Play Игры копия не создаётся. «Удалить все данные» стирает и её, если вы вошли; выйти из Google Play Игр можно в приложении Google Play Игры.</p>
 
+<h2>Таблица рекордов</h2>
+<p>Для таблицы рекордов игра хранит в Google Cloud Firestore (сервис Firebase) ваше лучшее время победы и время побед в «Пасьянсе дня». Результаты привязаны к анонимному идентификатору, который Firebase Authentication создаёт для установки игры; регистрации нет, имя и почта не запрашиваются. Если вы вошли в Google Play Игры, рядом с результатом показывается ваш ник Google Play Игр. Скрыть его можно в «Настройки → Данные → Мой ник в таблице рекордов» — тогда в таблице вы «Аноним». Результаты видят все игроки игры. «Сбросить статистику» убирает из таблицы ваше лучшее время, «Удалить все данные» — все ваши результаты и анонимный идентификатор. Если вы удалили игру, не стерев данные, результаты под вашим ником удалим по письму на почту.</p>
+
 <h2>Сервисы Google, которые использует игра</h2>
 <table>
   <tr><th>Сервис</th><th>Какие данные</th><th>Зачем</th></tr>
   <tr><td>Google Analytics для Firebase</td><td>Обезличенные события использования (открытые экраны, начатые и завершённые партии, шаги обучения, оформление, открытое за игровые монеты), идентификатор установки приложения, модель устройства, версия ОС, приблизительный регион по IP-адресу.</td><td>Понять, как улучшить игру. Работает только с вашего согласия: его можно дать на экране конфиденциальности при первом запуске и в любой момент изменить в игре — «Настройки → Данные → Обезличенная аналитика». В ЕЭЗ, Великобритании и Швейцарии согласие по умолчанию выключено.</td></tr>
   <tr><td>Firebase Crashlytics</td><td>Отчёты о сбоях: стек вызовов, модель устройства, версия ОС и приложения, состояние приложения в момент сбоя, идентификатор установки.</td><td>Находить и исправлять ошибки.</td></tr>
   <tr><td>Google AdMob</td><td>IP-адрес (для приблизительного местоположения), взаимодействие с рекламой и приложением, диагностические данные, идентификаторы устройства и приложения (например, App Set ID). Рекламный идентификатор Android игра не использует.</td><td>Показ неперсонализированного рекламного баннера — единственного источника дохода игры, подсчёт показов, защита от мошенничества. В ЕЭЗ, Великобритании и Швейцарии согласие запрашивается через Google User Messaging Platform; изменить решение можно в «Настройки» → «Настройки рекламы».</td></tr>
+  <tr><td>Firebase Authentication, Cloud Firestore и App Check</td><td>Анонимный идентификатор установки игры, лучшее время победы, время побед в «Пасьянсе дня», ник Google Play Игр, если вы вошли и не скрыли его; для App Check — сведения о подлинности приложения и устройства от Google Play Integrity.</td><td>Своя таблица рекордов игры (см. «Таблица рекордов») и защита её от поддельных результатов.</td></tr>
   <tr><td>Google Play Игры</td><td>Если вы вошли в Google Play Игры — прогресс достижений, время побед в «Пасьянсе дня» и копия прогресса игры (см. «Облачное сохранение»).</td><td>Синхронизация достижений с вашим профилем Google Play Игр, таблица рекордов «Пасьянса дня» (ваше время и имя профиля Play Игр видны другим игрокам по правилам Google Play Игр) и облачное сохранение прогресса в вашем аккаунте.</td></tr>
 </table>
 <p>Эти сервисы обрабатывают данные по правилам Google: <a href="https://policies.google.com/privacy">Политика конфиденциальности Google</a>, <a href="https://policies.google.com/technologies/partner-sites">как Google использует данные приложений-партнёров</a>, <a href="https://firebase.google.com/support/privacy">конфиденциальность Firebase</a>. Данные передаются в зашифрованном виде (HTTPS).</p>
@@ -56,14 +61,13 @@
 <ul>
   <li>Не продаёт персональные данные и не передаёт их третьим лицам, кроме перечисленных сервисов Google.</li>
   <li>Не показывает персонализированную рекламу и не использует рекламный идентификатор.</li>
-  <li>Не отправляет результаты «Пасьянса дня» на собственный сервер: таблица рекордов дня работает через Google Play Игры и только после вашего входа в них.</li>
 </ul>
 
 <h2>Дети</h2>
 <p>Игра не предназначена для детей младше 13 лет и сознательно не собирает их данные.</p>
 
 <h2>Ваши права</h2>
-<p>Вы можете отозвать согласие на аналитику и рекламу в настройках игры, удалить данные на устройстве кнопкой «Удалить все данные» и запросить удаление данных аналитики и отчётов о сбоях, написав на <a href="mailto:nekrassovoleg229@gmail.com">nekrassovoleg229@gmail.com</a>. Мы ответим в течение 30 дней. Пошаговая инструкция — на странице <a href="delete-data.html">«Удаление данных»</a>.</p>
+<p>Вы можете отозвать согласие на аналитику и рекламу в настройках игры, скрыть свой ник в таблице рекордов, удалить данные на устройстве и свои результаты в таблице рекордов кнопкой «Удалить все данные» и запросить удаление данных аналитики и отчётов о сбоях, написав на <a href="mailto:nekrassovoleg229@gmail.com">nekrassovoleg229@gmail.com</a>. Мы ответим в течение 30 дней. Пошаговая инструкция — на странице <a href="delete-data.html">«Удаление данных»</a>.</p>
 
 <h2>Изменения</h2>
 <p>Если политика изменится, новая версия появится на этой странице с новой датой вступления в силу.</p>
@@ -73,12 +77,13 @@
 
 <section id="en" lang="en">
 <h1>Solitaire 3×3 Privacy Policy</h1>
-<p class="muted">Effective 20 October 2026. Developer: NEVOT. Contact: <a href="mailto:nekrassovoleg229@gmail.com">nekrassovoleg229@gmail.com</a>.</p>
+<p class="muted">Effective 15 November 2026. Developer: NEVOT. Contact: <a href="mailto:nekrassovoleg229@gmail.com">nekrassovoleg229@gmail.com</a>.</p>
 
 <h2>In short</h2>
 <ul>
   <li>The game needs no sign-up and asks for no permissions: no camera, microphone, contacts, location or files.</li>
   <li>The game does not collect your name, phone number, email address or payment details. There are no real-money purchases in the game.</li>
+  <li>The game’s leaderboard shows your best time. Your Google Play Games nickname appears next to it if you are signed in to Google Play Games; you can hide it and appear as “Anonymous”.</li>
   <li>Your games, statistics, achievements, coins and unlocked card styles are stored on your device. If you sign in to Google Play Games, a copy is kept in your Google Play Games account so your progress survives reinstalling the game or switching phones.</li>
   <li>Anonymous analytics, crash reports and ads are provided by Google services, described below.</li>
 </ul>
@@ -88,12 +93,16 @@
 <h2>Cloud save in Google Play Games</h2>
 <p>If you sign in to Google Play Games, the game keeps a copy of your progress in the Saved Games of your Google Play Games account: game history and statistics, coin transactions, unlocked and selected card backs, card faces and table backgrounds, achievement progress and the Daily Solitaire days you played. The copy lets your progress come back after reinstalling the game or on a new phone; progress from several devices is combined. The copy is stored by Google and the developer has no access to it. Without signing in to Google Play Games no copy is made. “Delete all data” erases it too while you are signed in; you can sign out in the Google Play Games app.</p>
 
+<h2>Leaderboard</h2>
+<p>For its leaderboard the game stores your best winning time and your Daily Solitaire winning times in Google Cloud Firestore (a Firebase service). The results are linked to an anonymous ID that Firebase Authentication creates for your installation of the game; there is no sign-up and no name or email is requested. If you are signed in to Google Play Games, your Google Play Games nickname is shown next to your result. You can hide it under Settings → Data → “My nickname in the leaderboard” and appear as “Anonymous”. Results are visible to all players of the game. “Reset statistics” removes your best time from the leaderboard; “Delete all data” removes all your results and the anonymous ID. If you uninstalled the game without deleting your data, email us and we will delete the results shown under your nickname.</p>
+
 <h2>Google services used by the game</h2>
 <table>
   <tr><th>Service</th><th>Data</th><th>Purpose</th></tr>
   <tr><td>Google Analytics for Firebase</td><td>Anonymous usage events (screens opened, games started and finished, tutorial steps, card styles and table backgrounds unlocked with in-game coins), app instance ID, device model, OS version, approximate region derived from the IP address.</td><td>To understand how to improve the game. Runs only with your consent, which you give on the privacy screen at first launch and can change at any time in the game under Settings → Data → Anonymous analytics. In the EEA, the UK and Switzerland it is off by default.</td></tr>
   <tr><td>Firebase Crashlytics</td><td>Crash reports: stack trace, device model, OS and app version, app state at the time of the crash, installation ID.</td><td>To find and fix bugs.</td></tr>
   <tr><td>Google AdMob</td><td>IP address (for approximate location), ad and app interactions, diagnostics, device and app identifiers (such as App Set ID). The game does not use the Android advertising ID.</td><td>To show a non-personalised banner ad — the game’s only source of income — count impressions and prevent fraud. In the EEA, the UK and Switzerland consent is requested through Google User Messaging Platform; you can change your choice in Settings → “Ad settings”.</td></tr>
+  <tr><td>Firebase Authentication, Cloud Firestore and App Check</td><td>An anonymous ID for your installation of the game, your best winning time, your Daily Solitaire winning times, your Google Play Games nickname if you are signed in and have not hidden it; for App Check — app and device integrity information from Google Play Integrity.</td><td>The game’s own leaderboard (see “Leaderboard”) and protecting it from fake results.</td></tr>
   <tr><td>Google Play Games</td><td>If you sign in to Google Play Games — achievement progress, your Daily Solitaire winning times and a copy of your game progress (see “Cloud save”).</td><td>To sync achievements with your Google Play Games profile, run the Daily Solitaire leaderboard (your time and Play Games profile name are visible to other players under Google Play Games rules) and keep your progress in your account.</td></tr>
 </table>
 <p>These services process data under Google’s terms: <a href="https://policies.google.com/privacy">Google Privacy Policy</a>, <a href="https://policies.google.com/technologies/partner-sites">how Google uses information from partner apps</a>, <a href="https://firebase.google.com/support/privacy">Firebase privacy</a>. Data is encrypted in transit (HTTPS).</p>
@@ -102,14 +111,13 @@
 <ul>
   <li>It does not sell personal data or share it with third parties other than the Google services listed above.</li>
   <li>It does not show personalised ads and does not use the advertising ID.</li>
-  <li>It does not send Daily Solitaire results to a server of its own: the daily leaderboard runs on Google Play Games and only after you sign in to it.</li>
 </ul>
 
 <h2>Children</h2>
 <p>The game is not directed at children under 13 and does not knowingly collect their data.</p>
 
 <h2>Your rights</h2>
-<p>You can withdraw consent for analytics and ads in the game settings, delete on-device data with “Delete all data”, and request deletion of analytics and crash data by writing to <a href="mailto:nekrassovoleg229@gmail.com">nekrassovoleg229@gmail.com</a>. We reply within 30 days. Step-by-step instructions are on the <a href="delete-data.html">Data deletion</a> page.</p>
+<p>You can withdraw consent for analytics and ads in the game settings, hide your nickname in the leaderboard, delete on-device data and your leaderboard results with “Delete all data”, and request deletion of analytics and crash data by writing to <a href="mailto:nekrassovoleg229@gmail.com">nekrassovoleg229@gmail.com</a>. We reply within 30 days. Step-by-step instructions are on the <a href="delete-data.html">Data deletion</a> page.</p>
 
 <h2>Changes</h2>
 <p>If this policy changes, the new version will appear on this page with a new effective date.</p>

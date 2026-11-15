@@ -34,12 +34,12 @@
 <p>Удаление игры с телефона тоже стирает все данные на устройстве.</p>
 <h2>Что удаляется</h2>
 <ul>
-  <li>Сразу, кнопкой «Удалить все данные»: настройки, история партий и статистика, монеты, открытые рубашки, стили карт и фоны стола, прогресс достижений, результаты «Пасьянса дня» на устройстве, а также облачная копия прогресса в Google Play Играх, если вы вошли.</li>
+  <li>Сразу, кнопкой «Удалить все данные»: настройки, история партий и статистика, монеты, открытые рубашки, стили карт и фоны стола, прогресс достижений, результаты «Пасьянса дня» на устройстве, ваши результаты в таблице рекордов игры и её анонимный идентификатор, а также облачная копия прогресса в Google Play Играх, если вы вошли.</li>
   <li>По письму: данные Google Analytics для Firebase и отчёты Firebase Crashlytics, связанные с вашей установкой игры.</li>
 </ul>
 <h2>Что хранится и сколько</h2>
 <ul>
-  <li>Своего сервера у игры нет: разработчик не хранит ваших данных у себя.</li>
+  <li>Таблица рекордов игры хранится в Google Cloud Firestore: лучшее время, время побед в «Пасьянсе дня» и ник Google Play Игр, если вы его не скрыли. Если вы удалили игру, не нажав «Удалить все данные», напишите на почту — удалим результаты под вашим ником.</li>
   <li>Отчёты о сбоях Crashlytics хранятся 90 дней, данные аналитики — не дольше 14 месяцев; потом они удаляются автоматически.</li>
   <li>Достижения и время в таблице рекордов «Пасьянса дня», уже отправленные в ваш профиль Google Play Игр, хранит Google. Удалить их можно в приложении Google Play Игры: настройки профиля → удаление аккаунта и данных Play Игр → данные отдельной игры.</li>
   <li>Данные показа рекламы обрабатывает Google AdMob по <a href="https://policies.google.com/privacy">политике конфиденциальности Google</a>; игра их не хранит.</li>
@@ -60,12 +60,12 @@
 <p>Uninstalling the game also erases all data on the device.</p>
 <h2>What is deleted</h2>
 <ul>
-  <li>Immediately, with “Delete all data”: settings, game history and statistics, coins, unlocked card backs, card faces and table backgrounds, achievement progress, Daily Solitaire results on the device, and the cloud copy of your progress in Google Play Games if you are signed in.</li>
+  <li>Immediately, with “Delete all data”: settings, game history and statistics, coins, unlocked card backs, card faces and table backgrounds, achievement progress, Daily Solitaire results on the device, your results in the game’s leaderboard and its anonymous ID, and the cloud copy of your progress in Google Play Games if you are signed in.</li>
   <li>On request by email: Google Analytics for Firebase data and Firebase Crashlytics reports linked to your installation of the game.</li>
 </ul>
 <h2>What is kept and for how long</h2>
 <ul>
-  <li>The game has no server of its own: the developer keeps none of your data.</li>
+  <li>The game’s leaderboard is stored in Google Cloud Firestore: your best time, Daily Solitaire winning times and your Google Play Games nickname unless you hid it. If you uninstalled the game without tapping “Delete all data”, email us and we will delete the results shown under your nickname.</li>
   <li>Crashlytics crash reports are kept for 90 days and analytics data for up to 14 months, after which they are deleted automatically.</li>
   <li>Achievements and Daily Solitaire leaderboard times already sent to your Google Play Games profile are kept by Google. You can delete them in the Google Play Games app: profile settings → delete Play Games account and data → data for an individual game.</li>
   <li>Ad data is processed by Google AdMob under the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>; the game does not store it.</li>
